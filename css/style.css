@@ -20,12 +20,15 @@ nav{
 }
 .right-nav{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     column-gap: 50px;
+    row-gap: 30px;
 }
 .list{
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 50px;
     color: #7e7e7e;
 }
@@ -167,6 +170,8 @@ nav{
 .pricing-body{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
     width: 100%;
     justify-content: space-evenly;
     /* margin: 50px; */
@@ -366,10 +371,17 @@ nav{
     margin-top: 80px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 80px;
     margin-top: 60px;
     margin-bottom: 20px;
     justify-content: space-between;
+}
+.footer-links{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .logo-footer>img{
     height: 30px;
@@ -396,4 +408,116 @@ nav{
 }
 .socialmedia-imgs{
     padding-top: 30px;
+}
+
+@media screen and (max-width: 922px) {
+    nav{
+        flex-direction: column;
+        row-gap: 30px;
+        /* padding: 40px 100px;
+        justify-content: space-between; */
+    }
+    .features{
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+    }
+    .features>div:nth-child(n){
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    /* .text-features{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } */
+    .text-features h3{
+        inline-size: auto;
+    }
+    .text-features p{
+        inline-size: auto;
+    }
+    .services-header{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10%;
+    }
+    .services-body{
+        margin: 30px 5%;
+    }
+    .services-header h3{
+        font-size: 40px;
+        color: #1f3148;
+        inline-size: auto;
+    }
+    .services-header p{
+        color: #7e7e7e;
+        margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .box-pricing h4{
+        position: static;
+        text-align: center;
+    }
+    .box-pricing p{
+        position: static;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .customer-reviews{
+        display: flex;
+        flex-direction: column;
+        margin: 5%;
+    }
+    .reviews-header>p{
+        width: 80%;
+    }
+    .review-item{
+        width: 80%;
+    }
+    .registration{
+        /* word-wrap: break-word; */
+        display: flex;
+        flex-direction: column;
+        padding: 3% 5%;
+    }
+    .registration h3{
+        inline-size: auto;
+        position: static;
+    }
+    .registration p{
+        inline-size: auto;
+        position: static;
+    }
+    
+    .registration button{
+        position: static;
+    }
+    .logo-footer>p{
+        margin-top: 30px;
+        /* word-wrap: break-word; */
+        inline-size: auto;
+        color: #7e7e7e;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .img-features img{
+        width: 300px;
+    }
+    .box-services{
+        height: 200px;
+        background-color: #fff;
+        width: 350px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .review-item{
+        width: 960%;
+    }
+    .footer{
+        margin: 5%;
+    }
 }
